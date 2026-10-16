@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8f60e70b6e58524f8bfdeb57e94b510, type: 3}
+  m_Name: Crop_Carrot
+  m_EditorClassIdentifier: Assembly-CSharp::CropData
+  displayName: "\uB2F9\uADFC"
+  prefab: {fileID: 5015445243557825110, guid: 2127d679a768d184191ad2db97315a31, type: 3}
+  modelScale: 0.4
+  sellPrice: 10
+  buyPrice: 0
+  growSeconds: 20
+  minYield: 2
+  maxYield: 3

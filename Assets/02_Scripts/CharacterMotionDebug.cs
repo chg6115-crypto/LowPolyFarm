@@ -38,7 +38,7 @@ public class CharacterMotionDebug : MonoBehaviour
         var kb = Keyboard.current;
         if (kb == null) return;
 
-        if (kb.numpad0Key.wasPressedThisFrame || kb.digit0Key.wasPressedThisFrame)
+        if (kb.numpad0Key.wasPressedThisFrame)
             _menuOpen = !_menuOpen;
 
         if (!_menuOpen) return;
@@ -51,18 +51,18 @@ public class CharacterMotionDebug : MonoBehaviour
 
     static bool Pressed(Keyboard kb, int index)
     {
-        // index 0 -> Numpad 1 / digit 1, ... index 8 -> Numpad 9 / digit 9
+        // 넘패드만 받습니다. 상단 숫자열 1~4 는 도구 전환(PlayerFarming)이 씁니다.
         switch (index)
         {
-            case 0: return kb.numpad1Key.wasPressedThisFrame || kb.digit1Key.wasPressedThisFrame;
-            case 1: return kb.numpad2Key.wasPressedThisFrame || kb.digit2Key.wasPressedThisFrame;
-            case 2: return kb.numpad3Key.wasPressedThisFrame || kb.digit3Key.wasPressedThisFrame;
-            case 3: return kb.numpad4Key.wasPressedThisFrame || kb.digit4Key.wasPressedThisFrame;
-            case 4: return kb.numpad5Key.wasPressedThisFrame || kb.digit5Key.wasPressedThisFrame;
-            case 5: return kb.numpad6Key.wasPressedThisFrame || kb.digit6Key.wasPressedThisFrame;
-            case 6: return kb.numpad7Key.wasPressedThisFrame || kb.digit7Key.wasPressedThisFrame;
-            case 7: return kb.numpad8Key.wasPressedThisFrame || kb.digit8Key.wasPressedThisFrame;
-            case 8: return kb.numpad9Key.wasPressedThisFrame || kb.digit9Key.wasPressedThisFrame;
+            case 0: return kb.numpad1Key.wasPressedThisFrame;
+            case 1: return kb.numpad2Key.wasPressedThisFrame;
+            case 2: return kb.numpad3Key.wasPressedThisFrame;
+            case 3: return kb.numpad4Key.wasPressedThisFrame;
+            case 4: return kb.numpad5Key.wasPressedThisFrame;
+            case 5: return kb.numpad6Key.wasPressedThisFrame;
+            case 6: return kb.numpad7Key.wasPressedThisFrame;
+            case 7: return kb.numpad8Key.wasPressedThisFrame;
+            case 8: return kb.numpad9Key.wasPressedThisFrame;
         }
         return false;
     }

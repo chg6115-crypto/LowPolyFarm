@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a67fdc3dfb40a3a1a2c8102a384002, type: 3}
+  m_Name: SoloSettings
+  m_EditorClassIdentifier:
+  startingCrops: 3
+  handCapacity: 2
+  waterCapacity: 3
+  initialRadius: 3
+  maximumRadius: 9
+  expansionPrice: 50
+  reach: 2.5
+  playerPrefab: {fileID: 55759568716416641, guid: 3d8818f20d0b1b340937613618aad4e1, type: 3}
+  wellPrefab: {fileID: 4780461327076811096, guid: 0d35cfe1bc0785c40a0bbb7e6cc624b1, type: 3}
+  soilPrefab: {fileID: 6968934442261395122, guid: 340795de02e554042a6fff677524f48b, type: 3}
+  hoePrefab: {fileID: 6675135018906014680, guid: 41f41cfb8ee3f6d43b4d66bc2b0e6093, type: 3}
+  hoeLocalPosition: {x: 0, y: 0.02, z: 0.02}
+  hoeLocalEuler: {x: 0, y: 0, z: -75}
+  hoeScale: 0.35
+  crops:
+  - name: 당근
+    sell: 10
+    buy: 0
+    seconds: 20
+    weights: 05000000040000000100000000000000
+    color: {r: 1, g: 0.45, b: 0.1, a: 1}
+    prefab: {fileID: 5015445243557825110, guid: 2127d679a768d184191ad2db97315a31, type: 3}
+  - name: 양배추
+    sell: 25
+    buy: 40
+    seconds: 35
+    weights: 02000000040000000300000001000000
+    color: {r: 0.4, g: 0.8, b: 0.3, a: 1}
+    prefab: {fileID: 2028245129027511954, guid: daf1fc2514ce29a4fb1e9ee72ef83d2c, type: 3}
+  - name: 호박
+    sell: 60
+    buy: 100
+    seconds: 50
+    weights: 00000000020000000400000004000000
+    color: {r: 1, g: 0.65, b: 0.1, a: 1}
+    prefab: {fileID: 3205875589651456997, guid: 4e1d2b818802a4740a407548a2fd1d32, type: 3}

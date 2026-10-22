@@ -74,6 +74,8 @@ public class PlayerMovement : MonoBehaviour
     Animator _animator;
     float _verticalVelocity;
     float _pushTimer;
+    // Lets scene-specific push controllers use the existing animation priority.
+    public void NotifyPushAnimation() { _pushTimer = pushHoldTime; }
     float _jogKickTimer;
     float _currentSpeed;
     Vector3 _moveDir;

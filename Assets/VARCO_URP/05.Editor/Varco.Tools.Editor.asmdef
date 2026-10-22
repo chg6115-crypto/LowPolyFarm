@@ -1,0 +1,5 @@
+{
+  "name": "Varco.Tools.Editor",
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

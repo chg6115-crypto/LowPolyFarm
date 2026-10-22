@@ -12,6 +12,8 @@ public class OrbitFollowCamera : MonoBehaviour
     public Transform target;
     [Tooltip("Height above the target's pivot that the camera orbits around.")]
     public float pivotHeight = 0.7f;
+    public Vector3 pivotOffset;
+    public bool deriveYawFromPlacement = true;
 
     [Header("Orbit")]
     public float yaw;
@@ -38,10 +40,21 @@ public class OrbitFollowCamera : MonoBehaviour
 
     Vector3 _velocity;
 
+    public void RestoreView(float initialYaw, float initialPitch, float initialDistance)
+    {
+        yaw = initialYaw;
+        pitch = Mathf.Clamp(initialPitch, minPitch, maxPitch);
+        distance = Mathf.Clamp(initialDistance, minDistance, maxDistance);
+        _velocity = Vector3.zero;
+        if (target == null) return;
+        transform.rotation = Quaternion.Euler(pitch, yaw, 0f);
+        transform.position = PivotPoint() - transform.forward * distance;
+    }
+
     void Start()
     {
         // keep whatever angle the camera was placed at in the scene
-        if (target != null)
+        if (target != null && deriveYawFromPlacement)
         {
             Vector3 flat = transform.position - PivotPoint();
             flat.y = 0f;
@@ -50,7 +63,7 @@ public class OrbitFollowCamera : MonoBehaviour
         }
     }
 
-    Vector3 PivotPoint() => target.position + Vector3.up * pivotHeight;
+    Vector3 PivotPoint() => target.position + Vector3.up * pivotHeight + pivotOffset;
 
     void LateUpdate()
     {

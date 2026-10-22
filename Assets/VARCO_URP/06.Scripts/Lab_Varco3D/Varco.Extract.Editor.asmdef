@@ -1,0 +1,5 @@
+{
+  "name": "Varco.Extract.Editor",
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}
